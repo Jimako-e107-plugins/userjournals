@@ -116,10 +116,11 @@ if (!class_exists("UserJournals")) {
                $temp = array_shift($qs);
                array_push($qs, $temp);
             }
-
-            $ujop = varset($qs[0], "bloggers");
-            $ujp1 = varset(intval($qs[1]), 0);
-            $ujp2 = varset(intval($qs[2]), 0);
+            $par1 = intval($qs[1]);
+            $par2 = intval($qs[2]);
+            $ujop = varset($qs[0], "bloggers"); 
+            $ujp1 = varset($par1, 0);
+            $ujp2 = varset($par2, 0);
 			 
 			$start = $this->startjournal(); //unnuke way
 
